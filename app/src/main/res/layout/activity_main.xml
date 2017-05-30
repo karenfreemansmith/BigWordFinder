@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/hintText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryLight"
         android:paddingBottom="36dp"
@@ -35,6 +35,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryLight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -53,14 +54,13 @@
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorPrimaryLight"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hintText"/>
+        app:layout_constraintTop_toBottomOf="@+id/hintText"
+        android:layout_marginStart="8dp"/>
 
     <Button
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
         android:background="@color/colorAccent"
         android:text="Try Word"
         app:layout_constraintHorizontal_bias="0.506"
