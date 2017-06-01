@@ -1,16 +1,20 @@
 package com.microacademylabs.bigwordfinder;
 
+import java.util.Random;
+
 /**
  * Created by Karen Freeman-Smith on 5/29/2017.
  */
 
 public class Words {
 
-  public static String getWord() {
-    return "abolitionist";
+  public static String getHint() {
+    Random rand = new Random();
+    int n = rand.nextInt(words.length);
+    return words[n];
   }
 
-  private String[] words = new String[]{
+  private static String[] words = new String[]{
       "abandonments","abbreviating","abbreviation","abbreviators","abecedarians",
       "aberrational","abjectnesses","abolishments","abolitionary","abolitionism",
       "abolitionist","abominations","aboriginally","abortionists","abortiveness",
@@ -24,12 +28,8 @@ public class Words {
       "accessorises","accessorized","accessorizes","acciaccatura","accidentally",
       "accipitrines","acclamations","acclimations","acclimatised","acclimatises",
       /*
-      "acclimatized
-      acclimatizer
-      acclimatizes
-      accommodated
-      accommodates
-      accommodator
+      "acclimatized","acclimatizer","acclimatizes","accommodated","accommodates",
+      "accommodator
       accompanists
       accompanying
       accomplished
@@ -713,12 +713,8 @@ public class Words {
       "backscatters","backslappers","backslapping","backsplashes","backstabbers",
       "backstabbing","backstamping","backstitched","backstitches","backstopping",
       /*
-      "backtracking
-      backwardness
-      backwoodsman
-      backwoodsmen
-      bactericidal
-      bactericides
+      "backtracking","backwardness","backwoodsman","backwoodsmen","bactericidal",
+      "bactericides
       bacteriocins
       bacteriology
       bacteriostat
@@ -1076,33 +1072,13 @@ public class Words {
       buttonhooked",
       */
       "cabbageworms","cabinetmaker","cabinetworks","cablecasting","cachinnating",
+      "cachinnation","cacographies","cadaverously","calamitously","calcareously",
+      "calcinations","calculatedly","calculations","calibrations","californiums",
+      "calisthenics","calligrapher","calligraphic","callownesses","calorimeters",
+      "calorimetric","calumniating","calumniation","calumniators","calumniously",
+      "calypsonians","camaraderies","cameraperson","camouflaging","camphorating",
       /*
-      "cachinnation
-      cacographies
-      cadaverously
-      calamitously
-      calcareously
-      calcinations
-      calculatedly
-      calculations
-      calibrations
-      californiums
-      calisthenics
-      calligrapher
-      calligraphic
-      callownesses
-      calorimeters
-      calorimetric
-      calumniating
-      calumniation
-      calumniators
-      calumniously
-      calypsonians
-      camaraderies
-      cameraperson
-      camouflaging
-      camphorating
-      canalization
+      "canalization
       cancelations
       cancellation
       candelabrums
@@ -2279,33 +2255,13 @@ public class Words {
       czarevitches",
       */
       "daintinesses","damaskeening","damnableness","damselfishes","dappernesses",
+      "daredeviltry","daringnesses","daughterless","daunorubicin","daydreamlike",
+      "daylightings","deacidifying","deactivating","deactivation","deactivators",
+      "deadlinesses","deaminations","deathwatches","debarkations","debaucheries",
+      "debilitating","debilitation","debonairness","debouchments","debridements",
+      "decalcifying","decalcomania","decantations","decapitating","decapitation",
       /*
-      "daredeviltry
-      daringnesses
-      daughterless
-      daunorubicin
-      daydreamlike
-      daylightings
-      deacidifying
-      deactivating
-      deactivation
-      deactivators
-      deadlinesses
-      deaminations
-      deathwatches
-      debarkations
-      debaucheries
-      debilitating
-      debilitation
-      debonairness
-      debouchments
-      debridements
-      decalcifying
-      decalcomania
-      decantations
-      decapitating
-      decapitation
-      decapitators
+      "decapitators
       decarbonated
       decarbonates
       decarbonized
@@ -3029,38 +2985,14 @@ public class Words {
       dysrhythmias",
       */
       "earsplitting","earthenwares","earthinesses","earthmovings","earthshakers",
+      "earthshaking","earwitnesses","eavesdropped","eavesdropper","ebulliencies",
+      "eccentricity","ecclesiastic","ecclesiology","echinococcus","echolocation",
+      "eclectically","eclecticisms","ecofeminisms","ecofeminists","ecologically",
+      "econometrics","econometrist","economically","ecoterrorism","ecoterrorist",
+      "ecstatically","ectoparasite","ecumenically","ecumenicisms","ecumenicists",
+      "ediblenesses","edifications","editorialist","editorialize","educatedness",
       /*
-      "earthshaking
-      earwitnesses
-      eavesdropped
-      eavesdropper
-      ebulliencies
-      eccentricity
-      ecclesiastic
-      ecclesiology
-      echinococcus
-      echolocation
-      eclectically
-      eclecticisms
-      ecofeminisms
-      ecofeminists
-      ecologically
-      econometrics
-      econometrist
-      economically
-      ecoterrorism
-      ecoterrorist
-      ecstatically
-      ectoparasite
-      ecumenically
-      ecumenicisms
-      ecumenicists
-      ediblenesses
-      edifications
-      editorialist
-      editorialize
-      educatedness
-      educationese
+      "educationese
       educationist
       edulcorating
       edutainments
@@ -3586,28 +3518,12 @@ public class Words {
       eyewitnesses",
       */
       "fabrications","fabulousness","facelessness","facilenesses","facilitating",
+      "facilitation","facilitative","facilitators","facilitatory","facsimileing",
+      "factionalism","factiousness","factitiously","factualities","fainthearted",
+      "faintishness","faithfulness","fallaciously","fallownesses","familiarised",
+      "familiarises","familiarized","familiarizes","familiarness","famousnesses",
       /*
-      "facilitation
-      facilitative
-      facilitators
-      facilitatory
-      facsimileing
-      factionalism
-      factiousness
-      factitiously
-      factualities
-      fainthearted
-      faintishness
-      faithfulness
-      fallaciously
-      fallownesses
-      familiarised
-      familiarises
-      familiarized
-      familiarizes
-      familiarness
-      famousnesses
-      fanaticizing
+      "fanaticizing
       fancifulness
       fanfaronades
       fantasticate
@@ -3920,33 +3836,13 @@ public class Words {
       futurologist",
       */
       "gadzookeries","galactorrhea","galactosemia","galactosemic","galactosides",
+      "gallbladders","gallerygoers","galligaskins","gallinaceous","gallinippers",
+      "gallivanting","galvanically","galvanometer","galvanoscope","gamesmanship",
+      "gamesomeness","gametogenous","gametophores","gametophytes","gametophytic",
+      "gamopetalous","ganglionated","gangliosides","gangsterdoms","gangsterisms",
+      "garishnesses","garnisheeing","garnishments","gasification","gastightness",
       /*
-      "gallbladders
-      gallerygoers
-      galligaskins
-      gallinaceous
-      gallinippers
-      gallivanting
-      galvanically
-      galvanometer
-      galvanoscope
-      gamesmanship
-      gamesomeness
-      gametogenous
-      gametophores
-      gametophytes
-      gametophytic
-      gamopetalous
-      ganglionated
-      gangliosides
-      gangsterdoms
-      gangsterisms
-      garishnesses
-      garnisheeing
-      garnishments
-      gasification
-      gastightness
-      gastrocnemii
+      "gastrocnemii
       gastronomies
       gastronomist
       gastroscopes
@@ -4177,38 +4073,14 @@ public class Words {
       gyromagnetic",
       */
       "haberdashers","haberdashery","habilitating","habilitation","habitability",
+      "habitualness","habituations","hagiographer","hagiographic","hagiological",
+      "hairbreadths","haircuttings","hairdressers","hairdressing","hairlessness",
+      "hairsbreadth","hairsplitter","hairstylings","hairstylists","hallucinated",
+      "hallucinates","hallucinator","hallucinogen","hallucinoses","hallucinosis",
+      "halogenating","halogenation","haloperidols","halterbreaks","halterbroken",
+      "hamantaschen","hamstringing","handbreadths","handcrafting","handednesses",
       /*
-      "habitualness
-      habituations
-      hagiographer
-      hagiographic
-      hagiological
-      hairbreadths
-      haircuttings
-      hairdressers
-      hairdressing
-      hairlessness
-      hairsbreadth
-      hairsplitter
-      hairstylings
-      hairstylists
-      hallucinated
-      hallucinates
-      hallucinator
-      hallucinogen
-      hallucinoses
-      hallucinosis
-      halogenating
-      halogenation
-      haloperidols
-      halterbreaks
-      halterbroken
-      hamantaschen
-      hamstringing
-      handbreadths
-      handcrafting
-      handednesses
-      handicappers
+      "handicappers
       handicapping
       handicrafter
       handkerchief
@@ -4606,33 +4478,13 @@ public class Words {
       hysterically
       */
       "ichthyofauna","ichthyosaurs","iconoclastic","iconographer","iconographic",
+      "iconolatries","iconological","icosahedrons","idealization","ideationally",
+      "identifiable","identifiably","ideographies","ideologizing","idiosyncrasy",
+      "idolatrously","idolizations","ignitability","ignobilities","ignorantness",
+      "illegalities","illegalizing","illegibility","illegitimacy","illegitimate",
+      "illiberalism","illiberality","illiteracies","illiterately","illogicality",
       /*
-      "iconolatries
-      iconological
-      icosahedrons
-      idealization
-      ideationally
-      identifiable
-      identifiably
-      ideographies
-      ideologizing
-      idiosyncrasy
-      idolatrously
-      idolizations
-      ignitability
-      ignobilities
-      ignorantness
-      illegalities
-      illegalizing
-      illegibility
-      illegitimacy
-      illegitimate
-      illiberalism
-      illiberality
-      illiteracies
-      illiterately
-      illogicality
-      illuminances
+      "illuminances
       illuminating
       illumination
       illuminative
@@ -5368,80 +5220,24 @@ public class Words {
       itinerations
       */
       "jackanapeses","jackasseries","jackhammered","jacklighting","jactitations",
-      /*
-      "jaggednesses
-      japonaiserie
-      jauntinesses
-      jejunenesses
-      jeopardising
-      jeopardizing
-      jettisonable
-      jitterbugged
-      jocosenesses
-      jocularities
-      johnsongrass
-      journalistic
-      journalizers
-      journalizing
-      journeyworks
-      joyfulnesses
-      joyousnesses
-      judgmentally
-      judicatories
-      junketeering
-      jurisconsult
-      jurisdiction
-      jurisprudent
-      juristically
-      juvenescence
-      juvenilities
-      */
+      "jaggednesses","japonaiserie","jauntinesses","jejunenesses","jeopardising",
+      "jeopardizing","jettisonable","jitterbugged","jocosenesses","jocularities",
+      "johnsongrass","journalistic","journalizers","journalizing","journeyworks",
+      "joyfulnesses","joyousnesses","judgmentally","judicatories","junketeering",
+      "jurisconsult","jurisdiction","jurisprudent","juristically","juvenescence",
+      "juvenilities",
       "kaleidoscope","karyokineses","karyokinesis","karyokinetic","karyological",
-      /*
-      "katzenjammer
-      keratinizing
-      keratoplasty
-      ketosteroids
-      keyboardists
-      kickstarting
-      kilocalories
-      kindergarten
-      kindlinesses
-      kinesthesias
-      kinetochores
-      kinetoplasts
-      kinetoscopes
-      kinglinesses
-      kinnikinnick
-      kitchenettes
-      kitchenwares
-      kitschifying
-      kleptomaniac
-      kleptomanias
-      klutzinesses
-      kneecappings
-      knightliness
-      knottinesses
-      knuckleballs
-      knucklebones
-      knuckleheads
-      kremlinology
-      kwashiorkors
-      kymographies
-      */
+      "katzenjammer","keratinizing","keratoplasty","ketosteroids","keyboardists",
+      "kickstarting","kilocalories","kindergarten","kindlinesses","kinesthesias",
+      "kinetochores","kinetoplasts","kinetoscopes","kinglinesses","kinnikinnick",
+      "kitchenettes","kitchenwares","kitschifying","kleptomaniac","kleptomanias",
+      "klutzinesses","kneecappings","knightliness","knottinesses","knuckleballs",
+      "knucklebones","knuckleheads","kremlinology","kwashiorkors","kymographies",
       "labanotation","labiodentals","laboratories","labradorites","labyrinthian",
+      "labyrinthine","lachrymators","lachrymosely","lachrymosity","laciniations",
+      "lacquerwares","lacquerworks","lacrimations","lactalbumins","lactobacilli",
       /*
-      "labyrinthine
-      lachrymators
-      lachrymosely
-      lachrymosity
-      laciniations
-      lacquerwares
-      lacquerworks
-      lacrimations
-      lactalbumins
-      lactobacilli
-      laicizations
+      "laicizations
       lallygagging
       lamellicorns
       lamentations
@@ -11121,13 +10917,12 @@ public class Words {
   wobblinesses","woefulnesses
   wollastonite","womanishness
   wondrousness","wontednesses
-  woodchoppers","woodcuttings","woodenheaded","woodennesses
-  woodshedding","woodworkings","woolgatherer","woollinesses
-  wordlessness","wordsmithery","workableness","workaholisms
-  workingwoman","workingwomen","worklessness","workmanships
-  workstations","worshipfully","worthinesses","wrathfulness
-  wretchedness","wristwatches","wrongfulness","wunderkinder
-      */
+  */
+  "woodchoppers","woodcuttings","woodenheaded","woodennesses","woodshedding",
+  "woodworkings","woolgatherer","woollinesses","wordlessness","wordsmithery",
+  "workableness","workaholisms","workingwoman","workingwomen","worklessness",
+  "workmanships","workstations","worshipfully","worthinesses","wrathfulness",
+  "wretchedness","wristwatches","wrongfulness","wunderkinder",
   "xanthophylls","xerographies","xerophytisms","xiphisternum","xylographers",
   "xylographies","xylographing","xylophonists",
 

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     hintText=(TextView)findViewById(R.id.hintText);
-    hintText.setText(Words.getWord());
+    hintText.setText(Words.getHint());
 
     guessWord=(EditText) findViewById(R.id.editGuess);
     guesses = new ArrayList<String>();
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View v) {
         // add word guess to array-list view
         guesses.add(guessWord.getText().toString());
+        guessWord.setText("");
 
         ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
         wordList.setAdapter(adapter);
