@@ -5447,9 +5447,7 @@ public class Words {
       */
       "macadamizing","machicolated","machinations","mackintoshes","macrocytoses",
       /*
-      "macrocytosis
-      macrofossils
-      macrogametes
+      "macrocytosis","macrofossils","macrogametes
       macronuclear
       macronucleus
       macropterous
@@ -10188,90 +10186,40 @@ public class Words {
       */
       "typewritings","typicalities","typification","typographers","typographies",
       "typographing","tyrannically","tyrannicides","tyrannosaurs","tyrothricins",
-      /*
-      ubiquitously","uglification
-      ultimateness","ultracareful
-      ultracompact","ultradistant
-      ultraheating","ultraleftism
-      ultraleftist","ultraliberal
-      ultramarines","ultramontane
-      ultraprecise","ultraradical
-      ultrarealism","ultrarealist
-      ultrarefined","ultraserious
-      ultravacuums","ultraviolent
-      ultraviolets","umbilication
-      umbrageously","unacceptable
-      unacceptably","unacclimated
-      unaccredited","unaccustomed
-      unacquainted","unadvertised
-      unaffectedly","unaffiliated
-      unaffordable","unaggressive
-      unalleviated","unambivalent
-      unanalyzable","unanswerable
-      unanswerably","unapologetic
-      unappealable","unappeasable
-      unappeasably","unappetizing
-      unassailable","unassailably
-      unassociated","unattainable
-      unattenuated","unattractive
-      unattributed","unauthorized
-      unavailingly","unbarricaded
-      unbecomingly","unbelievable
-      unbelievably","unbiasedness
-      unblinkingly","unblushingly
-      unbreachable","unbreathable
-      unbridgeable","uncalculated
-      uncalibrated","uncapturable
-      uncelebrated","uncensorious
-      unchallenged","unchangeable
-      unchangeably","unchangingly
-      unchaperoned","uncharitable
-      uncharitably","unchasteness
-      unchastities","unchivalrous
-      unchristened","unchronicled
-      uncinariases","uncinariasis
-      uncirculated","unclassified
-      uncleanliest","uncluttering
-      uncoalescing","uncoercively
-      uncommercial","uncommonness
-      uncompelling","uncomplacent
-      uncompounded","unconformity
-      unconfounded","unconjugated
-      unconsidered","unconstraint
-      uncontracted","uncontrolled
-      unconvincing","uncorrelated
-      uncourageous","uncovenanted
-      uncritically","unctuousness
-      uncultivable","uncultivated
-      undecillions","undeciphered
-      undecomposed","undefoliated
-      undemocratic","undependable
-      underachieve","underbellies
-      underbidders","underbidding
-      underbrushes","underbudding
-      undercharged","undercharges
-      underclasses","underclothes
-      undercoating","undercooking
-      undercooling","undercounted
-      undercurrent","undercutting
-      underdrawers","underexposed
-      underexposes","underfeeding
-      underfunding","undergarment
-      undergirding","undergrounds
-      undergrowths","underheating
-      underinsured","underlapping
-      underlayment","underletting
-      underloading","underlyingly
-      underpayment","underpinning
-      underplaying","underpowered
-      underpricing","underpropped
-      underreacted","underreports
-      underrunning","underscoring
-      underselling","undershirted
-      undersigning","understaffed
-      understating","understeered",
-      */
-      "understories","understudied","understudies","undersurface","undertakings",
+      // U
+      "ubiquitously","uglification","ultimateness","ultracareful","ultracompact",
+      "ultradistant","ultraheating","ultraleftism","ultraleftist","ultraliberal",
+      "ultramarines","ultramontane","ultraprecise","ultraradical","ultrarealism",
+      "ultrarealist","ultrarefined","ultraserious","ultravacuums","ultraviolent",
+      "ultraviolets","umbilication","umbrageously","unacceptable","unacceptably",
+      "unacclimated","unaccredited","unaccustomed","unacquainted","unadvertised",
+      "unaffectedly","unaffiliated","unaffordable","unaggressive","unalleviated",
+      "unambivalent","unanalyzable","unanswerable","unanswerably","unapologetic",
+      "unappealable","unappeasable","unappeasably","unappetizing","unassailable",
+      "unassailably","unassociated","unattainable","unattenuated","unattractive",
+      "unattributed","unauthorized","unavailingly","unbarricaded","unbecomingly",
+      "unbelievable","unbelievably","unbiasedness","unblinkingly","unblushingly",
+      "unbreachable","unbreathable","unbridgeable","uncalculated","uncalibrated",
+      "uncapturable","uncelebrated","uncensorious","unchallenged","unchangeable",
+      "unchangeably","unchangingly","unchaperoned","uncharitable","uncharitably",
+      "unchasteness","unchastities","unchivalrous","unchristened","unchronicled",
+      "uncinariases","uncinariasis","uncirculated","unclassified","uncleanliest",
+      "uncluttering","uncoalescing","uncoercively","uncommercial","uncommonness",
+      "uncompelling","uncomplacent","uncompounded","unconformity","unconfounded",
+      "unconjugated","unconsidered","unconstraint","uncontracted","uncontrolled",
+      "unconvincing","uncorrelated","uncourageous","uncovenanted","uncritically",
+      "unctuousness","uncultivable","uncultivated","undecillions","undeciphered",
+      "undecomposed","undefoliated","undemocratic","undependable","underachieve",
+      "underbellies","underbidders","underbidding","underbrushes","underbudding",
+      "undercharged","undercharges","underclasses","underclothes","undercoating",
+      "undercooking","undercooling","undercounted","undercurrent","undercutting",
+      "underdrawers","underexposed","underexposes","underfeeding","underfunding",
+      "undergarment","undergirding","undergrounds","undergrowths","underheating",
+      "underinsured","underlapping","underlayment","underletting","underloading",
+      "underlyingly","underpayment","underpinning","underplaying","underpowered",
+      "underpricing","underpropped","underreacted","underreports","underrunning",
+      "underscoring","underselling","undershirted","undersigning","understaffed",
+      "understating","understeered","understories","understudied","understudies","undersurface","undertakings",
       "undertenants","underthrusts","underutilize","undervaluing","underweights",
       "underwhelmed","underworking","underwriters","underwriting","underwritten",
       "undesignated","undesirables","undetectable","undetermined","undigestible",
@@ -10356,64 +10304,33 @@ public class Words {
       "voluntarisms","voluntarists","voluntaryism","voluntaryist","volunteering",
       "volunteerism","voluptuaries","voluptuously","votivenesses","vulcanisates",
       "vulcanizates",
-      /*
       // W
-
-      "wainscotings","wainscotting
-      wakeboarders","wakeboarding
-      walkingstick","wallpapering
-      wallydraigle","wantonnesses
-      warehouseman","warehousemen
-      warmongering","wastebaskets
-      wastefulness","watchdogging
-      watchfulness","watchmakings
-      watercoolers","watercourses
-      watercresses","waterflooded
-      waterfowlers","waterfowling
-      waterinesses","waterishness
-      waterlogging","watermanship
-      watermarking","waterproofed
-      waterproofer","waterskiings
-      weaklinesses","weaponeering
-      wearifulness","weatherboard
-      weathercasts","weathercocks
-      weatherglass","weatherizing
-      weatherproof","weightlessly
-      weisenheimer","welterweight
-      westernising","westernizing
-      wharfmasters","wheelbarrows
-      wheelwrights","wheezinesses
-      whencesoever","wherethrough
-      wherewithals","whiffletrees
-      whigmaleerie","whimsicality
-      whippletrees","whippoorwill
-      whipstitched","whipstitches
-      whisperingly","whitethroats
-      whitewashers","whitewashing
-      wholehearted","whoremasters
-      whoremongers","whortleberry
-      wickednesses","widowerhoods
-      wienerwursts","wifelinesses
-      wildernesses","wildfowlings
-      windbreakers","windjammings
-      windlestraws","windsurfings
-      winglessness","wintergreens
-      wintrinesses","wisecrackers
-      wisecracking","wisenheimers
-      witchgrasses","witenagemote
-      witenagemots","withdrawable
-      withoutdoors","withstanding
-      wobblinesses","woefulnesses
-      wollastonite","womanishness
-      wondrousness","wontednesses
-      */
-      "woodchoppers","woodcuttings","woodenheaded","woodennesses","woodshedding",
-      "woodworkings","woolgatherer","woollinesses","wordlessness","wordsmithery",
-      "workableness","workaholisms","workingwoman","workingwomen","worklessness",
-      "workmanships","workstations","worshipfully","worthinesses","wrathfulness",
-      "wretchedness","wristwatches","wrongfulness","wunderkinder",
-      "xanthophylls","xerographies","xerophytisms","xiphisternum","xylographers",
-      "xylographies","xylographing","xylophonists",
+      "wainscotings","wainscotting","wakeboarders","wakeboarding","walkingstick",
+      "wallpapering","wallydraigle","wantonnesses","warehouseman","warehousemen",
+      "warmongering","wastebaskets","wastefulness","watchdogging","watchfulness",
+      "watchmakings","watercoolers","watercourses","watercresses","waterflooded",
+      "waterfowlers","waterfowling","waterinesses","waterishness","waterlogging",
+      "watermanship","watermarking","waterproofed","waterproofer","waterskiings",
+      "weaklinesses","weaponeering","wearifulness","weatherboard","weathercasts",
+      "weathercocks","weatherglass","weatherizing","weatherproof","weightlessly",
+      "weisenheimer","welterweight","westernising","westernizing","wharfmasters",
+      "wheelbarrows","wheelwrights","wheezinesses","whencesoever","wherethrough",
+      "wherewithals","whiffletrees","whigmaleerie","whimsicality","whippletrees",
+      "whippoorwill","whipstitched","whipstitches","whisperingly","whitethroats",
+      "whitewashers","whitewashing","wholehearted","whoremasters","whoremongers",
+      "whortleberry","wickednesses","widowerhoods","wienerwursts","wifelinesses",
+      "wildernesses","wildfowlings","windbreakers","windjammings","windlestraws",
+      "windsurfings","winglessness","wintergreens","wintrinesses","wisecrackers",
+      "wisecracking","wisenheimers","witchgrasses","witenagemote","witenagemots",
+      "withdrawable","withoutdoors","withstanding","wobblinesses","woefulnesses",
+      "wollastonite","womanishness","wondrousness","wontednesses","woodchoppers",
+      "woodcuttings","woodenheaded","woodennesses","woodshedding","woodworkings",
+      "woolgatherer","woollinesses","wordlessness","wordsmithery","workableness",
+      "workaholisms","workingwoman","workingwomen","worklessness","workmanships",
+      "workstations","worshipfully","worthinesses","wrathfulness","wretchedness",
+      "wristwatches","wrongfulness","wunderkinder","xanthophylls","xerographies",
+      "xerophytisms","xiphisternum","xylographers","xylographies","xylographing",
+      "xylophonists",
       // Y
       "yeastinesses","yellowhammer","yellowthroat","yesternights","yoctoseconds",
       "youngberries","youthfulness",
