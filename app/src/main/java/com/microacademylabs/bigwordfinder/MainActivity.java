@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
   private String word;
   private String currentGuess;
+  private boolean[] used = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false};
   private ArrayList<String> guesses;
 
   @Override
@@ -50,8 +51,13 @@ public class MainActivity extends AppCompatActivity {
     letterGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        currentGuess+=parent.getItemAtPosition(position).toString();
-        guessWord.setText(currentGuess);
+        if(used[position]==false) {
+          currentGuess += parent.getItemAtPosition(position).toString();
+          guessWord.setText(currentGuess);
+          used[position]=true;
+        } else {
+          Toast.makeText(MainActivity.this, "That letter is already used", Toast.LENGTH_SHORT).show();
+        }
       }
     });
 
@@ -63,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View v) {
         guesses.add(guessWord.getText().toString());
         currentGuess="";
+        for(int i=0; i<used.length; i++) {
+          used[i]=false;
+        }
         guessWord.setText(currentGuess);
         ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
         wordList.setAdapter(adapter);
