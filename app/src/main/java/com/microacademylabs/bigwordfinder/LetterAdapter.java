@@ -1,6 +1,7 @@
 package com.microacademylabs.bigwordfinder;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;

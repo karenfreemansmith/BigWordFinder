@@ -1,6 +1,7 @@
 package com.microacademylabs.bigwordfinder;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
   private Button hintButton;
   private Button scoreButton;
   private ListView wordList;
+  private LetterAdapter mAdapter;
 
   private String word;
   private String currentGuess;
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     char[] hint = getHint(word).toCharArray();
 
     letterGrid = (GridView) findViewById(R.id.hintGrid);
-    letterGrid.setAdapter(new LetterAdapter(this, hint));
+    mAdapter = new LetterAdapter(this, hint);
+    letterGrid.setAdapter(mAdapter);
     letterGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
           currentGuess += parent.getItemAtPosition(position).toString();
           guessWord.setText(currentGuess);
           used[position]=true;
+          view.setBackgroundColor(Color.parseColor("#0097a7"));
         } else {
           Toast.makeText(MainActivity.this, "That letter is already used", Toast.LENGTH_SHORT).show();
         }
@@ -71,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
         currentGuess="";
         for(int i=0; i<used.length; i++) {
           used[i]=false;
+
+          MainActivity.this.letterGrid.setAdapter(mAdapter);
+
+          //letterGrid.getItemAtPosition(i).???.setBackgroundColor(Color.parseColor("#b2ebf2"));
         }
         guessWord.setText(currentGuess);
         ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
