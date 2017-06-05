@@ -29,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
   private Button okButton;
   private Button hintButton;
   private Button scoreButton;
+  private Button undoButton;
   private ListView wordList;
   private LetterAdapter mAdapter;
 
   private String word;
   private String currentGuess;
+  private int[] guessStack = new int[]{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
   private boolean[] used = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false};
   private ArrayList<String> guesses;
 
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
           currentGuess += parent.getItemAtPosition(position).toString();
           guessWord.setText(currentGuess);
           used[position]=true;
+          guessStack[currentGuess.length()-1]=position;
           view.setBackgroundColor(Color.parseColor("#0097a7"));
         } else {
           Toast.makeText(MainActivity.this, "That letter is already used", Toast.LENGTH_SHORT).show();
@@ -67,6 +70,19 @@ public class MainActivity extends AppCompatActivity {
 
     wordList=(ListView) findViewById(R.id.wordList);
 
+    undoButton=(Button)findViewById(R.id.backButton);
+    undoButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        if(currentGuess.length()>0) {
+          used[guessStack[currentGuess.length()-1]]=false;
+          currentGuess = currentGuess.substring(0,currentGuess.length()-1);
+          guessWord.setText(currentGuess);
+          // (something to reset individual underlign?) MainActivity.this.letterGrid.setAdapter(mAdapter);
+        }
+      }
+    });
+
     okButton=(Button) findViewById(R.id.okButton);
     okButton.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -75,11 +91,8 @@ public class MainActivity extends AppCompatActivity {
         currentGuess="";
         for(int i=0; i<used.length; i++) {
           used[i]=false;
-
-          MainActivity.this.letterGrid.setAdapter(mAdapter);
-
-          //letterGrid.getItemAtPosition(i).???.setBackgroundColor(Color.parseColor("#b2ebf2"));
         }
+        MainActivity.this.letterGrid.setAdapter(mAdapter);
         guessWord.setText(currentGuess);
         ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
         wordList.setAdapter(adapter);
