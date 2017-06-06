@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
           }
           MainActivity.this.letterGrid.setAdapter(mAdapter);
           guessWord.setText(currentGuess);
-          ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
+          WordAdapter adapter = new WordAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
           wordList.setAdapter(adapter);
           wordList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
