@@ -1,5 +1,8 @@
 package com.microacademylabs.bigwordfinder;
 
+import android.widget.Toast;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -12,6 +15,45 @@ public class Words {
     Random rand = new Random();
     int n = rand.nextInt(words.length);
     return words[n].toUpperCase().trim();
+  }
+
+  public static String getScore(String thisGuess) {
+    int score= 0;
+    switch(thisGuess.length()){
+      case 3:
+        score+=1;
+        break;
+      case 4:
+        score+=2;
+        break;
+      case 5:
+        score+=3;
+        break;
+      case 6:
+        score+=5;
+        break;
+      case 7:
+        score+=8;
+        break;
+      case 8:
+        score+=13;
+        break;
+      case 9:
+        score+=21;
+        break;
+      case 10:
+        score+=34;
+        break;
+      case 11:
+        score+=55;
+        break;
+      case 12:
+        score+=89;
+        break;
+      default:
+        break;
+    }
+    return String.valueOf(score);
   }
 
   private static String[] words = new String[]{
@@ -43,43 +85,15 @@ public class Words {
       "adaptability","adaptational","adaptiveness","adaptivities","additionally",
       "additivities","adenoviruses","adequateness","adhesiveness","adjectivally",
       "adjournments","adjudicating","adjudication","adjudicative","adjudicators",
+      "adjudicatory","adjustmental","administered","administrant","administrate",
+      "admirability","admonishment","admonitorily","adolescences","adolescently",
+      "adoptability","adoptianisms","adoptionisms","adoptionists","adorableness",
+      "adrenochrome","adroitnesses","adscititious","adulterating","adulteration",
+      "adulterators","adulteresses","adulterously","adumbrations","advancements",
+      "advantageous","adventitious","adventurisms","adventurists","adversatives",
+      "advertencies","advertisings","advertorials","advisability","aerobicizing",
       /*
-      "adjudicatory
-      adjustmental
-      administered
-      administrant
-      administrate
-      admirability
-      admonishment
-      admonitorily
-      adolescences
-      adolescently
-      adoptability
-      adoptianisms
-      adoptionisms
-      adoptionists
-      adorableness
-      adrenochrome
-      adroitnesses
-      adscititious
-      adulterating
-      adulteration
-      adulterators
-      adulteresses
-      adulterously
-      adumbrations
-      advancements
-      advantageous
-      adventitious
-      adventurisms
-      adventurists
-      adversatives
-      advertencies
-      advertisings
-      advertorials
-      advisability
-      aerobicizing
-      aerodynamics
+      "aerodynamics
       aeroembolism
       aeromagnetic
       aeromedicine
@@ -966,33 +980,13 @@ public class Words {
       "cartographer","cartographic","cartoonishly","cartwheelers","cartwheeling",
       "cassiterites","castigations","casualnesses","catabolizing","catachrestic",
       "catadioptric","cataphoreses","cataphoresis","cataphoretic","catastrophes",
+      "catastrophic","catchphrases","catechetical","categorising","categorizing",
+      "caterpillars","caterwauling","catheterized","catheterizes","cathodically",
+      "catholically","catholicates","catholicized","catholicizes","catholicoses",
+      "cationically","caudillismos","cauliflowers","causticities","cautiousness",
+      "cavalierisms","celebrations","cellulitises","cellulolytic","cementations",
       /*
-      "catastrophic
-      catchphrases
-      catechetical
-      categorising
-      categorizing
-      caterpillars
-      caterwauling
-      catheterized
-      catheterizes
-      cathodically
-      catholically
-      catholicates
-      catholicized
-      catholicizes
-      catholicoses
-      cationically
-      caudillismos
-      cauliflowers
-      causticities
-      cautiousness
-      cavalierisms
-      celebrations
-      cellulitises
-      cellulolytic
-      cementations
-      cementitious
+      "cementitious
       censoriously
       centenarians
       centennially
