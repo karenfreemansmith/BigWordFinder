@@ -86,24 +86,28 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         String thisGuess = guessWord.getText().toString();
+        if(guesses.contains(thisGuess)) {
+          thisGuess="";
+          Toast.makeText(MainActivity.this, "duplicate word, not added", Toast.LENGTH_SHORT).show();
+        }
         if(thisGuess.length()>0) {
           guesses.add(thisGuess);
-          currentGuess="";
-          for(int i=0; i<used.length; i++) {
-            used[i]=false;
-          }
-          MainActivity.this.letterGrid.setAdapter(mAdapter);
-          guessWord.setText(currentGuess);
-          WordAdapter adapter = new WordAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
-          wordList.setAdapter(adapter);
-          wordList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.oxforddictionaries.com/definition/" + guesses.get(position)));
-              startActivity(webIntent);
-            }
-          });
         }
+        currentGuess="";
+        for(int i=0; i<used.length; i++) {
+          used[i]=false;
+        }
+        MainActivity.this.letterGrid.setAdapter(mAdapter);
+        guessWord.setText(currentGuess);
+        WordAdapter adapter = new WordAdapter(MainActivity.this, android.R.layout.simple_list_item_1, guesses);
+        wordList.setAdapter(adapter);
+        wordList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+          @Override
+          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.oxforddictionaries.com/definition/" + guesses.get(position)));
+            startActivity(webIntent);
+          }
+        });
       }
     });
 
