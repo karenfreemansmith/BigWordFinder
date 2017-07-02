@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         wordList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
           @Override
           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.oxforddictionaries.com/definition/" + guesses.get(position)));
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=" + guesses.get(position)));
             startActivity(webIntent);
           }
         });
