@@ -1,5 +1,7 @@
 package com.microacademylabs.bigwordfinder;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -9,9 +11,10 @@ import java.util.Random;
 public class Words {
 
   public static String getWord() {
-    Random rand = new Random();
-    int n = rand.nextInt(words.length);
-    return words[n].toUpperCase().trim();
+//    Random rand = new Random();
+//    int n = rand.nextInt(words.length);
+//    return words[n].toUpperCase().trim();
+    return "finddatabase";
   }
 
   public static String getScore(String thisGuess) {
@@ -53,7 +56,15 @@ public class Words {
     return String.valueOf(score);
   }
 
+  public static ArrayList<String> getWords() {
+    ArrayList<String> wordlist = new ArrayList<>();
+    wordlist.addAll(Arrays.asList(words));
+
+    return wordlist;
+  }
+
   private static String[] words = new String[]{
+      /*
       // A
       "abandonments","abbreviating","abbreviation","abbreviators","abecedarians",
       "aberrational","abjectnesses","abolishments","abolitionary","abolitionism",
@@ -1440,7 +1451,7 @@ public class Words {
       "numismatists","nuptialities","nutritionist","nutritiously","nympholeptic",
       "nymphomaniac","nymphomanias",
 
-      // N
+      // O
       "oafishnesses","oarsmanships","obdurateness","obfuscations","objectifying",
       "objectivisms","objectivists","objurgations","oblanceolate","oblatenesses",
       "obligatorily","obligingness","obliterating","obliteration","obliterative",
@@ -1529,7 +1540,7 @@ public class Words {
       "overweighing","overweighted","overwhelming","overwintered","overwithheld",
       "overwithhold","ovipositions","owlishnesses","oxalacetates","oxaloacetate",
       "oxyacetylene","oxygenations","ozonizations","ozonospheres",
-/*
+
       // P
       "pachysandras","pacification","pacificators","packinghouse","paddleboards",
       "paddlefishes","paddywacking","paedogeneses","paedogenesis","paedogenetic",
@@ -2259,7 +2270,7 @@ public class Words {
       "twelvemonths","tympaniteses","typefounders","typefounding","typesettings",
       "typewritings","typicalities","typification","typographers","typographies",
       "typographing","tyrannically","tyrannicides","tyrannosaurs","tyrothricins",
-*/
+
       // U
       "ubiquitously","uglification","ultimateness","ultracareful","ultracompact",
       "ultradistant","ultraheating","ultraleftism","ultraleftist","ultraliberal",
@@ -2417,7 +2428,6 @@ public class Words {
       "zeptoseconds","zillionaires","zoantharians","zoogeography",
       "zoologically","zooplankters","zooplanktons","zoosporangia","zootechnical",
       "zooxanthella","zwitterionic","zygapophyses","zygapophysis","zygomorphies"
-
-
+*/
     };
 }

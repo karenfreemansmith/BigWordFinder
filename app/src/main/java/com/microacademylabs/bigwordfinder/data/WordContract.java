@@ -28,5 +28,15 @@ public final class WordContract {
     public static final int CLASS_4 = 4;
     public static final int CLASS_3 = 3;
 
+    public static final String SQL_CREATE_ENTRIES = "CREATE TABLE " +
+        TABLE_NAME + "( " +
+        _ID + " INTEGER PRIMARY KEY, " +
+        COLUMN_CLASS + " TEXT, " +
+        COLUMN_WORD + " TEXT, " +
+        COLUMN_DEFINITION + " TEXT, " +
+        COLUMN_IMAGE + " TEXT)";
+
+    public static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " +
+        TABLE_NAME;
   }
 }
