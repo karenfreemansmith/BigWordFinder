@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.microacademylabs.bigwordfinder.Words;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;

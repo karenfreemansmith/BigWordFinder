@@ -1,5 +1,12 @@
 package com.microacademylabs.bigwordfinder;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.microacademylabs.bigwordfinder.data.WordContract;
+import com.microacademylabs.bigwordfinder.data.WordDbHelper;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -10,11 +17,40 @@ import java.util.Random;
 
 public class Words {
 
-  public static String getWord() {
-//    Random rand = new Random();
-//    int n = rand.nextInt(words.length);
-//    return words[n].toUpperCase().trim();
-    return "finddatabase";
+  private static ArrayList<String> wordList;
+
+  private static void getWords(Context context) {
+    wordList = new ArrayList<>();
+    WordDbHelper mWordDbHelper = new WordDbHelper(context);
+    SQLiteDatabase mDb = mWordDbHelper.getReadableDatabase();
+    Cursor mCursor = mDb.rawQuery("SELECT * FROM " + WordContract.WordEntry.TABLE_NAME + ";", null);
+    try {
+      if (mCursor.getCount() != 0) {
+        while (!mCursor.isLast()) {
+          mCursor.moveToNext();
+          String word = mCursor.getString(mCursor.getColumnIndex(WordContract.WordEntry.COLUMN_WORD));
+          wordList.add(word);
+        }
+      } else {
+        wordList.add("FindDatabase");
+      }
+    } finally {
+      mCursor.close();
+      mDb.close();
+    }
+  }
+
+  public static ArrayList<String> getAllWords(Context context) {
+    getWords(context);
+    return wordList;
+  }
+
+
+  public static String getWord(Context context) {
+    getWords(context);
+    Random rand = new Random();
+    int n = rand.nextInt(wordList.size());
+    return wordList.get(n).toUpperCase().trim();
   }
 
   public static String getScore(String thisGuess) {
@@ -54,13 +90,6 @@ public class Words {
         break;
     }
     return String.valueOf(score);
-  }
-
-  public static ArrayList<String> getWords() {
-    ArrayList<String> wordlist = new ArrayList<>();
-    wordlist.addAll(Arrays.asList(words));
-
-    return wordlist;
   }
 
   private static String[] words = new String[]{

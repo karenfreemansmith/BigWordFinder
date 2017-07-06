@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     guessWord=(TextView) findViewById(R.id.editGuess);
     guesses = new ArrayList<String>();
     currentGuess = "";
-    word = Words.getWord();
+    word = Words.getWord(this);
     char[] hint = getHint(word).toCharArray();
 
     letterGrid = (GridView) findViewById(R.id.hintGrid);
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     hintButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Toast.makeText(MainActivity.this, word, Toast.LENGTH_SHORT).show();
+        //Show interstitial adds here... see add to get hint(s)
         Intent intent = new Intent(MainActivity.this, SearchActivity.class);
         startActivity(intent);
       }

@@ -27,33 +27,11 @@ public class SearchActivity extends AppCompatActivity {
   private ListView mWordList;
   private WordAdapter mWordAdapter;
 
-  private void getWords() {
-    mWords = new ArrayList<>();
-    WordDbHelper mWordDbHelper = new WordDbHelper(this);
-    SQLiteDatabase mDb = mWordDbHelper.getReadableDatabase();
-    Cursor mCursor = mDb.rawQuery("SELECT * FROM " + WordEntry.TABLE_NAME + ";", null);
-    try {
-      if (mCursor.getCount() != 0) {
-        while (!mCursor.isLast()) {
-          mCursor.moveToNext();
-          String word = mCursor.getString(mCursor.getColumnIndex(WordEntry.COLUMN_WORD));
-          mWords.add(word);
-        }
-      } else {
-        mWords.add("Database Missing...");
-      }
-    } finally {
-      mCursor.close();
-      mDb.close();
-    }
-  }
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_search);
-
-    getWords();
+    mWords = Words.getAllWords(this);
     mWordList = (ListView) findViewById(R.id.wordList);
 
     mWordAdapter = new WordAdapter(SearchActivity.this, android.R.layout.simple_list_item_1, mWords);
@@ -76,15 +54,14 @@ public class SearchActivity extends AppCompatActivity {
 
       @Override
       public boolean onQueryTextSubmit(String query) {
-        Toast.makeText(SearchActivity.this, "Find things that match: " + query, Toast.LENGTH_SHORT).show();
-        mWordAdapter.getFilter().filter(query);
-        mWordAdapter.notifyDataSetChanged();
+        //Toast.makeText(SearchActivity.this, "Find things that match: " + query, Toast.LENGTH_SHORT).show();
+        mWordAdapter.filter(query);
         return false;
       }
 
       @Override
       public boolean onQueryTextChange(String newText) {
-        //mAdapter.filter(newText);
+        //mWordAdapter.filter(query);
         return false;
       }
     });
