@@ -3,12 +3,12 @@ package com.microacademylabs.bigwordfinder;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.microacademylabs.bigwordfinder.data.WordContract;
 import com.microacademylabs.bigwordfinder.data.WordDbHelper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -41,6 +41,9 @@ public class Words {
   }
 
   public static ArrayList<String> getAllWords(Context context) {
+    Log.d("getAllWords", "calling copyDb");
+    WordDbHelper.copyDb(context);
+    Log.d("getAllWords", "return from copyDb");
     getWords(context);
     return wordList;
   }

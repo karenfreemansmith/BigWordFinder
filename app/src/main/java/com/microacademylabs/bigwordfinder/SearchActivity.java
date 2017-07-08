@@ -1,9 +1,7 @@
 package com.microacademylabs.bigwordfinder;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.net.Uri;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +29,7 @@ public class SearchActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_search);
+
     mWords = Words.getAllWords(this);
     mWordList = (ListView) findViewById(R.id.wordList);
 
